@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Menu from "./Menu";
 import { Wrapper, Logo, Line, MenuIcon } from "./Header.styles";
 import LogoSVG from "../../images/logo.svg";
 import HamburgerMenuIcon from "../../images/icon-hamburger.svg";
 import CloseMenuIcon from "../../images/icon-close.svg";
+import useScreenWidth from "./useScreenWidth";
 
 export default function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false);
+  const { isMobile } = useScreenWidth();
+
+  useEffect(() => {
+    if (isMobile) {
+      setIsMenuActive(false);
+    }
+  }, [isMobile]);
 
   return (
     <Wrapper>

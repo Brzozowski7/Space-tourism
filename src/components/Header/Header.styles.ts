@@ -3,12 +3,16 @@ import { pallete } from "../../misc/pallete";
 
 export const Wrapper = styled.header`
   width: 100%;
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
   padding: 0 0 0 30px;
+  margin-top: 30px;
+  @media only screen and (max-width: 700px) {
+    margin-top: 0px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -24,8 +28,10 @@ export const Line = styled.hr`
 `;
 
 export const MenuIcon = styled.img`
+  cursor: pointer;
   display: none;
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 700px) {
+    color: ${pallete.TransparentWhite};
     display: inline-block;
     color: ${pallete.TransparentWhite};
     margin-right: 30px;

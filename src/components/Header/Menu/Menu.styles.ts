@@ -15,12 +15,12 @@ export const Wrapper = styled.nav<{ isMenuActive: boolean }>`
     rgba(4, 11, 54, 0.6449930313922444) 0%,
     rgba(4, 11, 18, 1) 100%
   );
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 700px) {
     position: absolute;
     display: ${(props) => (props.isMenuActive ? "flex" : "none")};
     flex-direction: column;
     left: 0;
-    top: 80px;
+    top: 70px;
     height: 100%;
     width: 100%;
   }
@@ -38,7 +38,7 @@ export const StyledLink = styled(NavLink)`
   &.active {
     border-bottom: 2px ${pallete.White} solid;
   }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 700px) {
     width: 50%;
   }
 `;
@@ -46,6 +46,9 @@ export const StyledLink = styled(NavLink)`
 export const MenuItemNumber = styled.span`
   font-weight: 700;
   color: ${pallete.White};
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const MenuItemName = styled.span`

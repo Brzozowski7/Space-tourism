@@ -44,7 +44,7 @@ export const StyledLink = styled(NavLink)`
 `;
 
 export const MenuItemNumber = styled.span`
-  font-weight: 640;
+  font-weight: 700;
   color: ${pallete.White};
   @media only screen and (max-width: 960px) {
     display: none;

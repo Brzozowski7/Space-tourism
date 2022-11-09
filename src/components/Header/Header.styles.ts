@@ -10,7 +10,7 @@ export const Wrapper = styled.header`
   justify-content: space-between;
   padding: 0 0 0 30px;
   margin-top: 30px;
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 960px) {
     margin-top: 0px;
   }
 `;
@@ -22,7 +22,7 @@ export const Logo = styled.img`
 export const Line = styled.hr`
   width: 30%;
   border: 0.1px solid ${pallete.TransparentLightGray};
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 960px) {
     display: none;
   }
 `;
@@ -30,7 +30,7 @@ export const Line = styled.hr`
 export const MenuIcon = styled.img`
   cursor: pointer;
   display: none;
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 640px) {
     color: ${pallete.TransparentWhite};
     display: inline-block;
     color: ${pallete.TransparentWhite};

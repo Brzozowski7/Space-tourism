@@ -4,7 +4,7 @@ const useScreenWidth = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const checkScreenWidth = () => {
-    if (window.innerWidth > 700) {
+    if (window.innerWidth > 640) {
       setIsMobile(false);
     } else {
       setIsMobile(true);

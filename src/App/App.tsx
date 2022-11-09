@@ -1,10 +1,15 @@
-import { GlobalStyle } from "./App.styles";
+import { BrowserRouter as Router } from "react-router-dom";
+import { GlobalStyle, Wrapper } from "./App.styles";
+import Header from "../components/Header";
 
 function App() {
   return (
-    <div>
-      <GlobalStyle />
-    </div>
+    <Wrapper>
+      <Router>
+        <GlobalStyle />
+        <Header />
+      </Router>
+    </Wrapper>
   );
 }
 

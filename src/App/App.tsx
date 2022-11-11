@@ -11,7 +11,7 @@ const Home = lazy(() => import("../pages/Home"));
 function App() {
   return (
     <Wrapper>
-      <ErrorBoundary FallbackComponent={<ErrorBoundaryFallback />}>
+      <ErrorBoundary FallbackComponent={ErrorBoundaryFallback}>
         <Router>
           <GlobalStyle />
           <Header />

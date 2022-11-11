@@ -3,7 +3,7 @@ import { FallbackProps } from "react-error-boundary";
 const ErrorBoundaryFallback = ({
   error,
   resetErrorBoundary,
-}:FallbackProps) => {
+}: FallbackProps) => {
   return (
     <div>
       <h1>An error occurred: {error.message}</h1>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useScreenWidth = (width:number) => {
+const useScreenWidth = (width: number) => {
   const [isMatched, setIsMatched] = useState(false);
 
   const checkScreenWidth = () => {
@@ -19,7 +19,7 @@ const useScreenWidth = (width:number) => {
     };
   }, []);
 
-  return { isMatched };
+  return isMatched;
 };
 
 export default useScreenWidth;

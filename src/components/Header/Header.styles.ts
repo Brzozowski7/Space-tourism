@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { pallete } from "../../misc/pallete";
 
 export const Wrapper = styled.header`
+  position: absolute;
   width: 100%;
   height: 80px;
   display: flex;

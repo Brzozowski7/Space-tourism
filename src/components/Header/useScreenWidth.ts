@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-const useScreenWidth = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const useScreenWidth = (width:number) => {
+  const [isMatched, setIsMatched] = useState(false);
 
   const checkScreenWidth = () => {
-    if (window.innerWidth > 640) {
-      setIsMobile(false);
+    if (window.innerWidth > width) {
+      setIsMatched(false);
     } else {
-      setIsMobile(true);
+      setIsMatched(true);
     }
   };
 
@@ -19,7 +19,7 @@ const useScreenWidth = () => {
     };
   }, []);
 
-  return { isMobile };
+  return { isMatched };
 };
 
 export default useScreenWidth;

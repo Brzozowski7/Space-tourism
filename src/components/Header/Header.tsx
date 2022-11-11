@@ -8,13 +8,13 @@ import useScreenWidth from "./useScreenWidth";
 
 export default function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const { isMobile } = useScreenWidth();
+  const { isMatched } = useScreenWidth(640);
 
   useEffect(() => {
-    if (isMobile) {
+    if (isMatched) {
       setIsMenuActive(false);
     }
-  }, [isMobile]);
+  }, [isMatched]);
 
   return (
     <Wrapper>

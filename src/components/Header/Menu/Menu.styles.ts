@@ -21,7 +21,7 @@ export const Wrapper = styled.nav<{ isMenuActive: boolean }>`
     flex-direction: column;
     left: 0;
     top: 70px;
-    height: 100%;
+    height: 90vh;
     width: 100%;
   }
 `;

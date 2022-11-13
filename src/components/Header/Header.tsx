@@ -4,17 +4,17 @@ import { Wrapper, Logo, Line, MenuIcon } from "./Header.styles";
 import LogoSVG from "../../images/logo.svg";
 import HamburgerMenuIcon from "../../images/icon-hamburger.svg";
 import CloseMenuIcon from "../../images/icon-close.svg";
-import useScreenWidth from "./useScreenWidth";
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 export default function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const { isMatched } = useScreenWidth(640);
+  const isMobile = useScreenWidth(640);
 
   useEffect(() => {
-    if (isMatched) {
+    if (isMobile) {
       setIsMenuActive(false);
     }
-  }, [isMatched]);
+  }, [isMobile]);
 
   return (
     <Wrapper>

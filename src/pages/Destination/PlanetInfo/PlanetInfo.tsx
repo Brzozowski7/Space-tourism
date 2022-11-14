@@ -1,4 +1,3 @@
-import { IDestinations } from "../../../declarations";
 import {
   Wrapper,
   PlanetHeading,

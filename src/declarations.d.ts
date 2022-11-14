@@ -1,9 +1,7 @@
-import { SerializedError } from "@reduxjs/toolkit";
-
-export interface IStore {
+interface IStore {
   allData: {
     loading: boolean;
-    error: SerializedError;
+    error: import("@reduxjs/toolkit").SerializedError;
     data: {
       crew: ICrew[];
       destinations: IDestinations[];
@@ -11,14 +9,15 @@ export interface IStore {
     };
   };
 }
-export interface ICrew {
+
+interface ICrew {
   bio: string;
   images: IImage;
   name: string;
   role: string;
 }
 
-export interface IDestinations {
+interface IDestinations {
   description: string;
   distance: string;
   images: IImage;
@@ -26,13 +25,13 @@ export interface IDestinations {
   travel: string;
 }
 
-export interface ITechnology {
+interface ITechnology {
   name: string;
   description: string;
   image: IImage;
 }
 
-export interface IImage {
+interface IImage {
   png: string;
   webp: string;
 }

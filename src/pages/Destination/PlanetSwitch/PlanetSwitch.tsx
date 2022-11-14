@@ -1,18 +1,16 @@
 import { Dispatch, SetStateAction } from "react";
 import { useSelector } from "react-redux";
 import { Wrapper, PlanetItem } from "./PlanetSwitch.styles";
-import { IStore } from "../../../declarations";
 
 interface PlanetSwitchProps {
-  setActivePlanet: Dispatch<SetStateAction<number>>;
-  activePlanet: number;
+  setActivePlanetIndex: Dispatch<SetStateAction<number>>;
+  activePlanetIndex: number;
 }
 
 export default function PlanetSwitch({
-  setActivePlanet,
-  activePlanet,
+  setActivePlanetIndex,
+  activePlanetIndex,
 }: PlanetSwitchProps) {
-    
   const destinations = useSelector(
     (state: IStore) => state.allData.data.destinations
   );
@@ -22,9 +20,9 @@ export default function PlanetSwitch({
       {destinations.map((item, index) => {
         return (
           <PlanetItem
-            onClick={() => setActivePlanet(index)}
+            onClick={() => setActivePlanetIndex(index)}
             key={index}
-            active={index === activePlanet}
+            active={index === activePlanetIndex}
           >
             {item.name}
           </PlanetItem>

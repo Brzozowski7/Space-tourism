@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { IStore } from "../../declarations";
 import {
   Wrapper,
   HeadingAndPlanetImage,
@@ -12,13 +11,13 @@ import PlanetSwitch from "./PlanetSwitch";
 import SubPageHeading from "../../components/SubPageHeading";
 import PlanetInfo from "./PlanetInfo";
 
-export default function Destinations() {
+export default function Destination() {
   const isMobile = useScreenWidth(640);
   const isTablet = useScreenWidth(960);
-  const [activePlanet, setActivePlanet] = useState(0);
+  const [activePlanetIndex, setActivePlanetIndex] = useState(0);
 
   const destinations = useSelector(
-    ({allData}:IStore) => allData.data.destinations
+    ({ allData }: IStore) => allData.data.destinations
   );
 
   return (
@@ -29,16 +28,16 @@ export default function Destinations() {
             PICK YOUR DESTINATION
           </SubPageHeading>
           <PlanetImage
-            src={destinations[activePlanet].images.png}
+            src={destinations[activePlanetIndex].images.png}
             alt="planet"
           />
         </HeadingAndPlanetImage>
         <PlanetSwitchAndInfo>
           <PlanetSwitch
-            setActivePlanet={setActivePlanet}
-            activePlanet={activePlanet}
+            setActivePlanetIndex={setActivePlanetIndex}
+            activePlanetIndex={activePlanetIndex}
           />
-          <PlanetInfo planet={destinations[activePlanet]} />
+          <PlanetInfo planet={destinations[activePlanetIndex]} />
         </PlanetSwitchAndInfo>
       </Wrapper>
     )

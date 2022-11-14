@@ -28,7 +28,7 @@ export default function Home() {
         </Description>
       </InformationPart>
       <ExploreLinkWrapper>
-        <ExploreLink to="/">Explore</ExploreLink>
+        <ExploreLink to="/destination">Explore</ExploreLink>
       </ExploreLinkWrapper>
     </Wrapper>
   );

@@ -6,10 +6,12 @@ export const GlobalStyle = createGlobalStyle`
         padding:0;
         margin:0;
     }
+    html{
+      height: 100%;
+    }
     body{
       font-family: 'Space Mono', monospace;
-      width: 100vw;
-      height: 100vh;
+      height: 100%;
       overflow-x: hidden;
     }
 `;

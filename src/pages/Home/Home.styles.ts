@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { pallete } from "../../misc/pallete";
-import { guessBgImage } from "./Home.utils";
+import guessBgImage from "../../utils/guessBgImage";
+import { SubPages } from "../../utils/guessBgImage/guessBgImage.const";
 
 export const Wrapper = styled.main<{ isMobile: boolean; isTablet: boolean }>`
   width: 100vw;
   height: 100vh;
-  background: url(${(props) => guessBgImage(props.isMobile, props.isTablet)});
+  background: url(${(props) => guessBgImage(SubPages.HOME,props.isMobile, props.isTablet)});
   background-size: cover;
   display: flex;
   flex-direction: row;

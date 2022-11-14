@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { guessBgImage } from "./Destination.utils";
+import guessBgImage from "../../utils/guessBgImage";
 import { pallete } from "../../misc/pallete";
+import { SubPages } from "../../utils/guessBgImage/guessBgImage.const";
 
 export const Wrapper = styled.main<{ isMobile: boolean; isTablet: boolean }>`
   height: 100vh;
-  background: url(${(props) => guessBgImage(props.isMobile, props.isTablet)});
+  background: url(${(props) => guessBgImage(SubPages.DESTINATION, props.isMobile, props.isTablet)});
   background-size: cover;
   display: flex;
   flex-direction: row;

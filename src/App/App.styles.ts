@@ -8,8 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     body{
       font-family: 'Space Mono', monospace;
-      width: 100vw;
-      height: 100vh;
+      height: 100%;
       overflow-x: hidden;
     }
 `;

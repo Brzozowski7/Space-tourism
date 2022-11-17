@@ -11,9 +11,9 @@ import { AppDispatch } from "../redux/store";
 
 const Home = lazy(() => import("../pages/Home"));
 const Destination = lazy(() => import("../pages/Destination"));
+const Crew = lazy(() => import("../pages/Crew"));
 
 function App() {
-
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
@@ -30,6 +30,7 @@ function App() {
             <Routes>
               <Route index element={<Home />} />
               <Route path="/destination" element={<Destination />} />
+              <Route path="/crew" element={<Crew />} />
             </Routes>
           </Suspense>
         </Router>

@@ -7,6 +7,9 @@ import bgDestinationDesktop from "../../images/background-destination-desktop.jp
 import bgCrewMobile from "../../images/background-crew-mobile.jpg";
 import bgCrewTablet from "../../images/background-crew-tablet.jpg";
 import bgCrewDesktop from "../../images/background-crew-desktop.jpg";
+import bgTechMobile from "../../images/background-technology-mobile.jpg";
+import bgTechTablet from "../../images/background-technology-tablet.jpg";
+import bgTechDesktop from "../../images/background-technology-desktop.jpg";
 import { SubPages } from "./guessBgImage.const";
 
 export const guessBgImage = (
@@ -34,6 +37,13 @@ export const guessBgImage = (
       if (isTablet) {
         return bgCrewTablet;
       } else return bgCrewDesktop;
+    case SubPages.TECHNOLOGY:
+      if (isMobile) {
+        return bgTechMobile;
+      }
+      if (isTablet) {
+        return bgTechTablet;
+      } else return bgTechDesktop;
   }
 };
 

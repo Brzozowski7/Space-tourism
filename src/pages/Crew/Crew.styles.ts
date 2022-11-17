@@ -6,8 +6,7 @@ import { SubPages } from "../../utils/guessBgImage/guessBgImage.const";
 export const Wrapper = styled.main<{ isMobile: boolean; isTablet: boolean }>`
   min-height: 100vh;
   height: 100%;
-  background: url(${(props) =>
-    guessBgImage(SubPages.CREW, props.isMobile, props.isTablet)});
+  background: url(${(props) => guessBgImage(SubPages.CREW, props.isMobile, props.isTablet)});
   background-size: cover;
   display: flex;
   flex-direction: column;

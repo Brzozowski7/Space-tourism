@@ -4,7 +4,7 @@ interface IStore {
     error: import("@reduxjs/toolkit").SerializedError;
     data: {
       crew: ICrew[];
-      destinations: IDestinations[];
+      destinations: IDestination[];
       technology: ITechnology[];
     };
   };
@@ -17,7 +17,7 @@ interface ICrew {
   role: string;
 }
 
-interface IDestinations {
+interface IDestination {
   description: string;
   distance: string;
   images: IImage;

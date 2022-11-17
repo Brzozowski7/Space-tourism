@@ -6,9 +6,6 @@ export const GlobalStyle = createGlobalStyle`
         padding:0;
         margin:0;
     }
-    html{
-      height: 100%;
-    }
     body{
       font-family: 'Space Mono', monospace;
       height: 100%;

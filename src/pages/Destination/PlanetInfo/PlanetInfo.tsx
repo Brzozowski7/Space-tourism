@@ -10,7 +10,7 @@ import {
 } from "./PlanetInfo.styles";
 
 interface PlanetInfoProps {
-  planet: IDestinations;
+  planet: IDestination;
 }
 
 export default function PlanetInfo({ planet }: PlanetInfoProps) {

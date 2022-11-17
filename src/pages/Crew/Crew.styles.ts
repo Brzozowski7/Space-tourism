@@ -5,7 +5,9 @@ import { SubPages } from "../../utils/guessBgImage/guessBgImage.const";
 
 export const Wrapper = styled.main<{ isMobile: boolean; isTablet: boolean }>`
   min-height: 100vh;
-  background: url(${(props) => guessBgImage(SubPages.CREW, props.isMobile, props.isTablet)});
+  height: 100%;
+  background: url(${(props) =>
+    guessBgImage(SubPages.CREW, props.isMobile, props.isTablet)});
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -59,8 +61,9 @@ export const Title = styled.h2`
 export const Name = styled.p`
   font-size: 72px;
   color: ${pallete.White};
+  word-break: break-word;
   @media only screen and (max-width: 960px) {
-    font-size: 48px;
+    font-size: 32px;
   }
 `;
 
@@ -75,6 +78,9 @@ export const CrewMemberImageWrapper = styled.div`
   pointer-events: none;
   @media only screen and (max-width: 960px) {
     width: 100%;
+    height: 500px;
+  }
+  @media only screen and (max-width: 640px) {
     height: 250px;
   }
 `;

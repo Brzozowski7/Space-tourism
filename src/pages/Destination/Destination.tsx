@@ -6,14 +6,11 @@ import {
   PlanetImage,
   PlanetSwitchAndInfo,
 } from "./Destination.styles";
-import useScreenWidth from "../../hooks/useScreenWidth";
 import PlanetSwitch from "./PlanetSwitch";
 import SubPageHeading from "../../components/SubPageHeading";
 import PlanetInfo from "./PlanetInfo";
 
 export default function Destination() {
-  const isMobile = useScreenWidth(640);
-  const isTablet = useScreenWidth(960);
   const [activePlanetIndex, setActivePlanetIndex] = useState(0);
 
   const destinations = useSelector(
@@ -22,7 +19,7 @@ export default function Destination() {
 
   return (
     destinations && (
-      <Wrapper isTablet={isTablet} isMobile={isMobile}>
+      <Wrapper>
         <HeadingAndPlanetImage>
           <SubPageHeading subpageNumber="01">
             PICK YOUR DESTINATION

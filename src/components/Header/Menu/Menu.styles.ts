@@ -23,6 +23,7 @@ export const Wrapper = styled.nav<{ isMenuActive: boolean }>`
     top: 70px;
     height: 90vh;
     width: 100%;
+    z-index: 99;
   }
 `;
 

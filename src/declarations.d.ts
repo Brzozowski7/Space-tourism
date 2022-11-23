@@ -28,10 +28,15 @@ interface IDestination {
 interface ITechnology {
   name: string;
   description: string;
-  image: IImage;
+  images: ITechImages;
 }
 
 interface IImage {
   png: string;
   webp: string;
+}
+
+interface ITechImages {
+  portrait: string;
+  landscape: string;
 }

@@ -9,12 +9,15 @@ import ErrorBoundaryFallback from "../components/ErrorBoundaryFallback";
 import { getData } from "../redux/slices/dataSlice";
 import { AppDispatch } from "../redux/store";
 
+
 const Home = lazy(() => import("../pages/Home"));
 const Destination = lazy(() => import("../pages/Destination"));
+const Crew = lazy(() => import("../pages/Crew"));
+const Tech = lazy(() => import("../pages/Tech"));
 
 function App() {
-
   const dispatch = useDispatch<AppDispatch>();
+
 
   useEffect(() => {
     dispatch(getData());
@@ -30,6 +33,8 @@ function App() {
             <Routes>
               <Route index element={<Home />} />
               <Route path="/destination" element={<Destination />} />
+              <Route path="/crew" element={<Crew />} />
+              <Route path="/tech" element={<Tech />} />
             </Routes>
           </Suspense>
         </Router>

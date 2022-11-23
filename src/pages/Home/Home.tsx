@@ -1,4 +1,3 @@
-import useScreenWidth from "../../hooks/useScreenWidth";
 import {
   Wrapper,
   Heading,
@@ -9,11 +8,8 @@ import {
 } from "./Home.styles";
 
 export default function Home() {
-  const isMobile = useScreenWidth(640);
-  const isTablet = useScreenWidth(960);
-
   return (
-    <Wrapper isMobile={isMobile} isTablet={isTablet}>
+    <Wrapper>
       <InformationPart>
         <Heading>
           So, you want travel to

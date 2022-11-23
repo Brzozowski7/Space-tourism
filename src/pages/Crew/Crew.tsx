@@ -10,19 +10,15 @@ import {
   CrewMemberImageWrapper,
 } from "./Crew.styles";
 import SubPageHeading from "../../components/SubPageHeading";
-import useScreenWidth from "../../hooks/useScreenWidth";
 import Carousel from "./Carousel";
 import CarouselItem from "./CarouselItem";
 
 export default function Crew() {
-  const isMobile = useScreenWidth(640);
-  const isTablet = useScreenWidth(960);
-
   const crewMembers = useSelector(({ allData }: IStore) => allData.data.crew);
 
   return (
     crewMembers && (
-      <Wrapper isMobile={isMobile} isTablet={isTablet}>
+      <Wrapper>
         <SubPageHeading subpageNumber="02">MEET YOUR CREW</SubPageHeading>
         <Carousel>
           {crewMembers.map((member) => {

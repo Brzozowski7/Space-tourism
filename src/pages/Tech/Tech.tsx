@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import SubPageHeading from "../../components/SubPageHeading";
-import useScreenWidth from "../../hooks/useScreenWidth";
 import {
   Wrapper,
   Technologies,
@@ -14,8 +13,6 @@ import {
 import TechSwitch from "./TechSwitch";
 
 export default function Tech() {
-  const isMobile = useScreenWidth(640);
-  const isTablet = useScreenWidth(960);
   const [activeTechIndex, setActiveTechIndex] = useState(0);
 
   const technologies = useSelector(
@@ -24,7 +21,7 @@ export default function Tech() {
 
   return (
     technologies && (
-      <Wrapper isMobile={isMobile} isTablet={isTablet}>
+      <Wrapper>
         <SubPageHeading subpageNumber="03">SPACE LAUNCH 101</SubPageHeading>
         <Technologies>
           <TechSwitch

@@ -10,38 +10,49 @@ import bgCrewDesktop from "../../images/background-crew-desktop.jpg";
 import bgTechMobile from "../../images/background-technology-mobile.jpg";
 import bgTechTablet from "../../images/background-technology-tablet.jpg";
 import bgTechDesktop from "../../images/background-technology-desktop.jpg";
-import { SubPages } from "./guessBgImage.const";
+import { DisplayTypes, SubPages } from "./guessBgImage.const";
 
-export const guessBgImage = (
-  subpage: string,
-  isMobile: boolean,
-  isTablet: boolean
-) => {
+function reportWindowSize() {
+  if (window.innerWidth > 960) {
+    return DisplayTypes.DESKTOP;
+  } else if (window.innerWidth <= 960 && window.innerWidth > 640) {
+    return DisplayTypes.TABLET;
+  } else {
+    return DisplayTypes.MOBILE;
+  }
+}
+
+export const guessBgImage = (subpage: string) => {
+  let displayType;
+  window.addEventListener("resize", () => {
+    displayType = reportWindowSize();
+  });
+
   switch (subpage) {
     case SubPages.HOME:
-      if (isMobile) {
+      if (displayType === DisplayTypes.MOBILE) {
         return bgHomeMobile;
-      } else if (isTablet) {
+      } else if (displayType === DisplayTypes.TABLET) {
         return bgHomeTablet;
       } else return bgHomeDesktop;
     case SubPages.DESTINATION:
-      if (isMobile) {
+      if (displayType === DisplayTypes.MOBILE) {
         return bgDestinationMobile;
-      } else if (isTablet) {
+      } else if (displayType === DisplayTypes.TABLET) {
         return bgDestinationTablet;
       } else return bgDestinationDesktop;
     case SubPages.CREW:
-      if (isMobile) {
+      if (displayType === DisplayTypes.MOBILE) {
         return bgCrewMobile;
       }
-      if (isTablet) {
+      if (displayType === DisplayTypes.TABLET) {
         return bgCrewTablet;
       } else return bgCrewDesktop;
     case SubPages.TECHNOLOGY:
-      if (isMobile) {
+      if (displayType === DisplayTypes.MOBILE) {
         return bgTechMobile;
       }
-      if (isTablet) {
+      if (displayType === DisplayTypes.TABLET) {
         return bgTechTablet;
       } else return bgTechDesktop;
   }

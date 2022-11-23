@@ -3,10 +3,10 @@ import guessBgImage from "../../utils/guessBgImage";
 import { pallete } from "../../misc/pallete";
 import { SubPages } from "../../utils/guessBgImage/guessBgImage.const";
 
-export const Wrapper = styled.main<{ isMobile: boolean; isTablet: boolean }>`
+export const Wrapper = styled.main`
   min-height: 100vh;
   height: 100%;
-  background: url(${(props) => guessBgImage(SubPages.CREW, props.isMobile, props.isTablet)});
+  background: url(${guessBgImage(SubPages.CREW)});
   background-size: cover;
   display: flex;
   flex-direction: column;

@@ -14,7 +14,7 @@ interface CarouselProps {
 export default function Carousel({ children }: CarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const translateValue = activeIndex * 100;
+  const translateValue = activeIndex * 100; // %
 
   const updateIndex = (newIndex: number) => {
     if (newIndex < 0) {
